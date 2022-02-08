@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 // TODO Add crosshair deletion functionality
+// Message for confirming correct commit
 
 public class AppController {
     File crosshairFolder = new File("crosshairs");

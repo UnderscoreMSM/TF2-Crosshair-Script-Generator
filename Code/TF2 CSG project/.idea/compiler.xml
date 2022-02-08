@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tf2Script" />
+        <module name="TF2 CSG project" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo1" target="16" />
+      <module name="TF2 CSG project" target="16" />
       <module name="tf2Script" target="16" />
     </bytecodeTargetLevel>
   </component>
