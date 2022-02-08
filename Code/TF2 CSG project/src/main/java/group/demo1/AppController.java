@@ -92,9 +92,9 @@ public class AppController {
             }
 
         }
-        if (chkBoxIncludeScout.isSelected()) {
+//        if (chkBoxIncludeScout.isSelected()) {
             generate(cbScattergun, "tf_weapon_scattergun.txt", scriptsDir);
-        }
+//        }
 
         for (File e : crosshairsGenerate) { // Copies crosshair files to the generation path
             String src = "crosshairs/" + e.getName();

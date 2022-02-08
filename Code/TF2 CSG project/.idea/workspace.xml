@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223db1ca-46b4-4a5e-9f7e-a0f7e2bdefef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/TF2 CSG project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/ScriptApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/ScriptApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/appGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/appGUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,27 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4229885" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ScriptApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="group.demo1.ScriptApp" />
+      <module name="TF2 CSG project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="group.demo1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ScriptApp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -45,7 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1644303419667</updated>
       <workItem from="1644303420843" duration="253000" />
-      <workItem from="1644303701273" duration="116000" />
+      <workItem from="1644303701273" duration="2250000" />
+      <workItem from="1644306854906" duration="3872000" />
     </task>
     <servers />
   </component>

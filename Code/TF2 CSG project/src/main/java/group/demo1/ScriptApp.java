@@ -16,6 +16,9 @@ public class ScriptApp extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("TF2 Crosshair Script Generator");
         stage.setScene(scene);
+        stage.setMaxWidth(913);
+        stage.setMinWidth(913);
+        stage.setMinHeight(600);
         stage.getIcons().add(new Image("file:appIcon.png"));
         stage.show();
     }
