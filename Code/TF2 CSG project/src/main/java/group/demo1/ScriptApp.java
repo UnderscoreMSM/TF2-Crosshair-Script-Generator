@@ -7,8 +7,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-// TODO Let the program create the "crosshairs" folder if it does not exists
-
 public class ScriptApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
