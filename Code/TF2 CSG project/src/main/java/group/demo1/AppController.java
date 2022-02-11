@@ -1,6 +1,7 @@
 package group.demo1;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
@@ -29,7 +30,7 @@ public class AppController {
     private ChoiceBox<String> cbBat, cbFishMelee, cbSandman, cbWrapAssassin;
 
     @FXML
-    private ChoiceBox<String> cbRocketLauncher, cbDirectHit, cbCowMangler, cbAirStrike;
+    private ChoiceBox<String> cbRocketLauncher, cbDirectHit, cbMangler, cbAirStrike;
     @FXML
     private ChoiceBox<String> cbSoldierSG, cbBuffs, cbBison;
     @FXML
@@ -57,7 +58,7 @@ public class AppController {
     private ChoiceBox<String> cbFists;
 
     @FXML
-    private ChoiceBox<String> cbEngiSG, cbPomson, cbRescue, cbFrontierJustice;
+    private ChoiceBox<String> cbEngiSG, cbPomson, cbRescueRanger, cbFrontierJustice;
     @FXML
     private ChoiceBox<String> cbEngiPistol, cbWrangler, cbShortCircuit;
     @FXML
@@ -135,11 +136,74 @@ public class AppController {
                         }
                     }
                 }
-
             }
-//        if (chkBoxIncludeScout.isSelected()) {
+
             generate(cbScattergun, "tf_weapon_scattergun.txt", scriptsDir);
-//        }
+            generate(cbSodaPopper, "tf_weapon_soda_popper.txt", scriptsDir);
+            generate(cbShortstop, "tf_weapon_handgun_scout_primary.txt", scriptsDir);
+            generate(cbBabyFaceBlaster, "tf_weapon_pep_brawler_blaster.txt", scriptsDir);
+            generate(cbScoutPistol, "tf_weapon_pistol_scout.txt", scriptsDir);
+            generate(cbWinger, "tf_weapon_handgun_scout_secondary.txt", scriptsDir);
+            generate(cbClassic, "tf_weapon_cleaver.txt", scriptsDir);
+            generate(cbBonkDrink, "tf_weapon_lunchbox_drink.txt", scriptsDir);
+            generate(cbMadMilk, "tf_weapon_jar_milk.txt", scriptsDir);
+            generate(cbBat, "tf_weapon_bat.txt", scriptsDir);
+            generate(cbFishMelee, "tf_weapon_bat_fish.txt", scriptsDir);
+            generate(cbSandman, "tf_weapon_bat_wood.txt", scriptsDir);
+            generate(cbWrapAssassin, "tf_weapon_bat_giftwarp.txt", scriptsDir);
+            generate(cbRocketLauncher, "tf_weapon_rocketlauncher.txt", scriptsDir);
+            generate(cbDirectHit, "tf_weapon_rocketlauncher_directhit.txt", scriptsDir);
+            generate(cbMangler, "tf_weapon_particle_cannon.txt", scriptsDir);
+            generate(cbAirStrike, "tf_weapon_rocketlauncher_airstrike.txt", scriptsDir);
+            generate(cbSoldierSG, "tf_weapon_shotgun_soldier.txt", scriptsDir);
+            generate(cbBuffs, "tf_weapon_buff_item.txt", scriptsDir);
+            generate(cbBison, "tf_weapon_raygun.txt", scriptsDir);
+            generate(cbShovel, "tf_weapon_shovel.txt", scriptsDir);
+            generate(cbSoldierKatana, "tf_weapon_katana.txt", scriptsDir);
+            generate(cbFlameThrower, "tf_weapon_flamethrower.txt", scriptsDir);
+            generate(cbDragonFury, "tf_weapon_rocketlauncher_fireball.txt", scriptsDir);
+            generate(cbPyroSG, "tf_weapon_shotgun_pyro.txt", scriptsDir);
+            generate(cbFlareGun, "tf_weapon_flaregun.txt", scriptsDir);
+            generate(cbManmelter, "tf_weapon_flaregun_revenge.txt", scriptsDir);
+            generate(cbThrusters, "tf_weapon_rocketpack.txt", scriptsDir);
+            generate(cbGasPasser, "tf_weapon_jar.txt", scriptsDir);
+            generate(cbAxe, "tf_weapon_fireaxe.txt", scriptsDir);
+            generate(cbHotHand, "tf_weapon_slap.txt", scriptsDir);
+            generate(cbGrenadeLauncher, "tf_weapon_grenadelauncher.txt", scriptsDir);
+            generate(cbCannon, "tf_weapon_cannon.txt", scriptsDir);
+            generate(cbSticky, "tf_weapon_pipebomblauncher.txt", scriptsDir);
+            generate(cbBottle, "tf_weapon_bottle.txt", scriptsDir);
+            generate(cbSwords, "tf_weapon_sword.txt", scriptsDir);
+            generate(cbCaber, "tf_weapon_stickbomb.txt", scriptsDir);
+//            generate(cbDemoKatana, "tf_weapon_katana.txt", scriptsDir);
+            generate(cbMiniGun, "tf_weapon_minigun.txt",  scriptsDir);
+            generate(cbHeavySG, "tf_weapon_shotgun_hwg.txt", scriptsDir);
+            generate(cbFood, "tf_weapon_lunchbox.txt", scriptsDir);
+            generate(cbFists, "tf_weapon_fists.txt", scriptsDir);
+            generate(cbEngiSG, "tf_weapon_shotgun_primary.txt", scriptsDir);
+            generate(cbPomson, "tf_weapon_drg_pompson.txt", scriptsDir);
+            generate(cbRescueRanger, "tf_weapon_shotgun_building_rescue.txt", scriptsDir);
+            generate(cbFrontierJustice, "tf_weapon_sentry_revenge.txt", scriptsDir);
+            generate(cbEngiPistol, "tf_weapon_pistol.txt", scriptsDir);
+            generate(cbWrangler, "tf_weapon_laser_pointer.txt", scriptsDir);
+            generate(cbShortCircuit, "tf_weapon_mechanical_arm.txt", scriptsDir);
+            generate(cbWrench, "tf_weapon_wrench.txt", scriptsDir);
+            generate(cbGunslinger, "tf_weapon_robot_arm.txt", scriptsDir);
+            generate(cbSyringeGun, "tf_weapon_syringegun_medic.txt", scriptsDir);
+            generate(cbCrossbow, "tf_weapon_crossbow.txt", scriptsDir);
+            generate(cbMediGun, "tf_weapon_medigun.txt", scriptsDir);
+            generate(cbBonesaw, "tf_weapon_bonesaw.txt", scriptsDir);
+            generate(cbSniperRifle, "tf_weapon_sniperrifle.txt", scriptsDir);
+            generate(cbHuntsman, "tf_weapon_compound_bow.txt", scriptsDir);
+            generate(cbHitman, "tf_weapon_sniperrifle_decap.txt", scriptsDir);
+            generate(cbClassic, "tf_weapon_sniperrifle_classic.txt", scriptsDir);
+            generate(cbSMG, "tf_weapon_smg.txt", scriptsDir);
+            generate(cbCarbine, "tf_weapon_charged_smg.txt", scriptsDir);
+//            generate(cbJarate, "tf_weapon_jar.txt", scriptsDir);
+            generate(cbKukri, "tf_weapon_club.txt", scriptsDir);
+            generate(cbRevolver, "tf_weapon_revolver.txt", scriptsDir);
+            generate(cbKnife, "tf_weapon_knife.txt", scriptsDir);
+            generate(cbSapper, "tf_weapon_sapper.txt", scriptsDir);
 
             for (File e : crosshairsGenerate) { // Copies crosshair files to the generation path
                 String src = "crosshairs/" + e.getName();
@@ -152,6 +216,7 @@ public class AppController {
     }
 
     public void generate(ChoiceBox<String> cbWeapon, String weaponTXT, String folderDir) throws IOException {
+        addFileToList(cbWeapon.getValue());
         FileWriter script = new FileWriter(folderDir + "/" + weaponTXT);
         script.write(createScript(removeExtension(cbWeapon.getValue()) + ".vmt")); // Assuming the VMT file exists
         script.close();
@@ -193,31 +258,92 @@ public class AppController {
     }
 
     public void initialize() {
-        addFileToList("bigcross", crosshairsGenerate); // I forgot what this was for...
-        cbScattergun.setValue("Default");
-        cbSodaPopper.setValue("Default");
-        cbShortstop.setValue("Default");
-        cbBabyFaceBlaster.setValue("Default");
-        cbScoutPistol.setValue("Default");
-        cbWinger.setValue("Default");
-        cbCleaver.setValue("Default");
-        cbBonkDrink.setValue("Default");
-        cbMadMilk.setValue("Default");
-        cbBat.setValue("Default");
-        cbFishMelee.setValue("Default");
-        cbSandman.setValue("Default");
-        cbRocketLauncher.setValue("Default");
-
-
+        ObservableList<String> list = FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter)));
         // Scout
-        cbScattergun.setItems(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
-        cbSodaPopper.setItems(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
-        cbShortstop.setItems(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
-        cbBabyFaceBlaster.setItems(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
-        cbScoutPistol.setItems(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
+        cbScattergun.setItems(list);
+        cbSodaPopper.setItems(list);
+        cbShortstop.setItems(list);
+        cbBabyFaceBlaster.setItems(list);
+        cbScoutPistol.setItems(list);
+        cbWinger.setItems(list);
+        cbCleaver.setItems(list);
+        cbBonkDrink.setItems(list);
+        cbMadMilk.setItems(list);
+        cbBat.setItems(list);
+        cbFishMelee.setItems(list);
+        cbSandman.setItems(list);
+        cbWrapAssassin.setItems(list);
 
         // Soldier
-        cbRocketLauncher.setItems(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
+        cbRocketLauncher.setItems(list);
+        cbDirectHit.setItems(list);
+        cbMangler.setItems(list);
+        cbAirStrike.setItems(list);
+        cbSoldierSG.setItems(list);
+        cbBuffs.setItems(list);
+        cbBison.setItems(list);
+        cbShovel.setItems(list);
+        cbSoldierKatana.setItems(list);
+
+        // Pyro
+        cbFlameThrower.setItems(list);
+        cbDragonFury.setItems(list);
+        cbPyroSG.setItems(list);
+        cbFlareGun.setItems(list);
+        cbManmelter.setItems(list);
+        cbThrusters.setItems(list);
+        cbGasPasser.setItems(list);
+        cbAxe.setItems(list);
+        cbHotHand.setItems(list);
+
+        // Demoman
+        cbGrenadeLauncher.setItems(list);
+        cbCannon.setItems(list);
+        cbSticky.setItems(list);
+        cbBottle.setItems(list);
+        cbSwords.setItems(list);
+        cbCaber.setItems(list);
+        cbDemoKatana.setItems(list);
+
+        // Heavy
+        cbMiniGun.setItems(list);
+        cbHeavySG.setItems(list);
+        cbFood.setItems(list);
+        cbFists.setItems(list);
+
+        // Engineer
+        cbEngiSG.setItems(list);
+        cbPomson.setItems(list);
+        cbRescueRanger.setItems(list);
+        cbFrontierJustice.setItems(list);
+        cbEngiPistol.setItems(list);
+        cbWrangler.setItems(list);
+        cbShortCircuit.setItems(list);
+        cbWrench.setItems(list);
+        cbGunslinger.setItems(list);
+
+        // Medic
+        cbSyringeGun.setItems(list);
+        cbCrossbow.setItems(list);
+        cbMediGun.setItems(list);
+        cbBonesaw.setItems(list);
+
+        // Sniper
+        cbSniperRifle.setItems(list);
+        cbClassic.setItems(list);
+        cbHitman.setItems(list);
+        cbHuntsman.setItems(list);
+        cbSMG.setItems(list);
+        cbCarbine.setItems(list);
+        cbJarate.setItems(list);
+        cbKukri.setItems(list);
+
+        // Spy
+        cbRevolver.setItems(list);
+        cbKnife.setItems(list);
+        cbSapper.setItems(list);
+
+
     }
 
     public String removeExtension(String fileName) {
@@ -232,24 +358,26 @@ public class AppController {
         String template = """
                 "crosshair"
                 {
-                    "file"\t"vgui/replay/thumbnails/""";
+                    "file"            "vgui/replay/thumbnails/""";
         template = template.concat(vmtFile + """
-                "\n    "x"\t"0"
-                    "y"\t"0"
-                    "width"\t"64"
-                    "height"\t"64"
+                "
+                    "x"		        "0"
+                    "y"		        "0"
+                    "width"		    "64"
+                    "height"	    "64"
                 }""");
+
 
         return template;
     }
 
-    public boolean addFileToList(String crosshairName, ArrayList<File> list) { // true if the operation was successful, otherwise false
+    public boolean addFileToList(String crosshairName) { // true if the operation was successful, otherwise false
         File vtfTemp = new File("crosshairs/" + crosshairName + ".vtf");
         File vmtTemp = new File("crosshairs/" + crosshairName + ".vmt");
         if (vtfTemp.exists() && vmtTemp.exists()) {
-            if (!list.contains(vtfTemp) && !list.contains(vmtTemp)) {
-                list.add(vtfTemp);
-                list.add(vmtTemp);
+            if (!crosshairsGenerate.contains(vtfTemp) && !crosshairsGenerate.contains(vmtTemp)) {
+                crosshairsGenerate.add(vtfTemp);
+                crosshairsGenerate.add(vmtTemp);
                 return true;
             }
         }

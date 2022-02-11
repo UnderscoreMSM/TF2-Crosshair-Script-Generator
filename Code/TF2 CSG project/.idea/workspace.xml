@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223db1ca-46b4-4a5e-9f7e-a0f7e2bdefef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/appGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/appGUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +30,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4229885" />
     <property name="settings.editor.selected.configurable" value="discord-application" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="ScriptApp" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="ScriptApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -74,7 +76,8 @@
       <workItem from="1644346011303" duration="389000" />
       <workItem from="1644398068999" duration="406000" />
       <workItem from="1644481858395" duration="5521000" />
-      <workItem from="1644506089546" duration="2999000" />
+      <workItem from="1644506089546" duration="3380000" />
+      <workItem from="1644564783663" duration="7823000" />
     </task>
     <servers />
   </component>
