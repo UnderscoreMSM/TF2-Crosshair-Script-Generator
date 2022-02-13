@@ -87,22 +87,16 @@ public class AppController {
 
     @FXML
     private TextField tfDirectory;
-    @FXML
-    private CheckBox chkBoxIncludeScout;
 
     Alert alertAbout = new Alert(Alert.AlertType.INFORMATION);
     FilenameFilter filter = ((dir, name) -> name.toLowerCase().endsWith(".vtf")); // Lambda expression for filtering files
 
     @FXML
     protected void onGenerateClick() {
-//        String folderDir = tfDirectory.getText() + "/Custom crosshairs";
-//        String scriptsDir = folderDir + "/scripts";
         try {
             String targetDir = tfDirectory.getText();
             String scriptsDir = targetDir + "/Custom crosshairs/scripts";
-//        String crosshairsDir = folderDir + "/crosshairs";
-//        String crosshairsDir = tfDirectory.getText() + "/Custom crosshairs/crosshairs";
-//        String vguiDir = crosshairsDir + "/vgui";
+
             String destination = targetDir + "/Custom crosshairs/crosshairs/vgui/replay/thumbnails";
             File folder = new File(targetDir + "/Custom crosshairs");
             File scripts = new File(targetDir + "/Custom crosshairs/scripts");
@@ -205,10 +199,14 @@ public class AppController {
             generate(cbKnife, "tf_weapon_knife.txt", scriptsDir);
             generate(cbSapper, "tf_weapon_sapper.txt", scriptsDir);
 
+            System.out.println("The following files will be copied:\n" + crosshairsGenerate);
+
             for (File e : crosshairsGenerate) { // Copies crosshair files to the generation path
                 String src = "crosshairs/" + e.getName();
                 String dest = destination + "/" + e.getName();
+                System.out.println("Copying from " + src + " to " + dest);
                 Files.copy(Path.of(src), Path.of(dest));
+                System.out.println("Copying complete!");
             }
         } catch (Exception e) {
             System.out.println("Failed to generate; invalid path");
@@ -216,7 +214,7 @@ public class AppController {
     }
 
     public void generate(ChoiceBox<String> cbWeapon, String weaponTXT, String folderDir) throws IOException {
-        addFileToList(cbWeapon.getValue());
+        addFileToList(removeExtension(cbWeapon.getValue()));
         FileWriter script = new FileWriter(folderDir + "/" + weaponTXT);
         script.write(createScript(removeExtension(cbWeapon.getValue()) + ".vmt")); // Assuming the VMT file exists
         script.close();
@@ -362,7 +360,7 @@ public class AppController {
                     {
                         "crosshair"
                         {
-                            "file"            "vgui/replay/thumbnails/""";
+                            "file"          "vgui/replay/thumbnails/""";
         template = template.concat(removeExtension(vmtFile) + """
                 "
                             "x"		        "0"
@@ -386,6 +384,5 @@ public class AppController {
                 crosshairsGenerate.add(vmtTemp);
             }
         }
-        System.out.println("Files do not exist!");
     }
 }
