@@ -87,6 +87,12 @@ public class AppController {
 
     @FXML
     private TextField tfDirectory;
+    @FXML
+    private CheckBox chkBoxNoScout, chkBoxNoSoldier, chkBoxNoPyro;
+    @FXML
+    private CheckBox chkBoxNoDemoman, chkBoxNoHeavy, chkBoxNoEngineer;
+    @FXML
+    private CheckBox chkBoxNoMedic, chkBoxNoSniper, chkBoxNoSpy;
 
     Alert alertAbout = new Alert(Alert.AlertType.INFORMATION);
     FilenameFilter filter = ((dir, name) -> name.toLowerCase().endsWith(".vtf")); // Lambda expression for filtering files
@@ -132,72 +138,90 @@ public class AppController {
                 }
             }
 
-            generate(cbScattergun, "tf_weapon_scattergun.txt", scriptsDir);
-            generate(cbSodaPopper, "tf_weapon_soda_popper.txt", scriptsDir);
-            generate(cbShortstop, "tf_weapon_handgun_scout_primary.txt", scriptsDir);
-            generate(cbBabyFaceBlaster, "tf_weapon_pep_brawler_blaster.txt", scriptsDir);
-            generate(cbScoutPistol, "tf_weapon_pistol_scout.txt", scriptsDir);
-            generate(cbWinger, "tf_weapon_handgun_scout_secondary.txt", scriptsDir);
-            generate(cbClassic, "tf_weapon_cleaver.txt", scriptsDir);
-            generate(cbBonkDrink, "tf_weapon_lunchbox_drink.txt", scriptsDir);
-            generate(cbMadMilk, "tf_weapon_jar_milk.txt", scriptsDir);
-            generate(cbBat, "tf_weapon_bat.txt", scriptsDir);
-            generate(cbFishMelee, "tf_weapon_bat_fish.txt", scriptsDir);
-            generate(cbSandman, "tf_weapon_bat_wood.txt", scriptsDir);
-            generate(cbWrapAssassin, "tf_weapon_bat_giftwarp.txt", scriptsDir);
-            generate(cbRocketLauncher, "tf_weapon_rocketlauncher.txt", scriptsDir);
-            generate(cbDirectHit, "tf_weapon_rocketlauncher_directhit.txt", scriptsDir);
-            generate(cbMangler, "tf_weapon_particle_cannon.txt", scriptsDir);
-            generate(cbAirStrike, "tf_weapon_rocketlauncher_airstrike.txt", scriptsDir);
-            generate(cbSoldierSG, "tf_weapon_shotgun_soldier.txt", scriptsDir);
-            generate(cbBuffs, "tf_weapon_buff_item.txt", scriptsDir);
-            generate(cbBison, "tf_weapon_raygun.txt", scriptsDir);
-            generate(cbShovel, "tf_weapon_shovel.txt", scriptsDir);
-            generate(cbSoldierKatana, "tf_weapon_katana.txt", scriptsDir);
-            generate(cbFlameThrower, "tf_weapon_flamethrower.txt", scriptsDir);
-            generate(cbDragonFury, "tf_weapon_rocketlauncher_fireball.txt", scriptsDir);
-            generate(cbPyroSG, "tf_weapon_shotgun_pyro.txt", scriptsDir);
-            generate(cbFlareGun, "tf_weapon_flaregun.txt", scriptsDir);
-            generate(cbManmelter, "tf_weapon_flaregun_revenge.txt", scriptsDir);
-            generate(cbThrusters, "tf_weapon_rocketpack.txt", scriptsDir);
-            generate(cbGasPasser, "tf_weapon_jar.txt", scriptsDir);
-            generate(cbAxe, "tf_weapon_fireaxe.txt", scriptsDir);
-            generate(cbHotHand, "tf_weapon_slap.txt", scriptsDir);
-            generate(cbGrenadeLauncher, "tf_weapon_grenadelauncher.txt", scriptsDir);
-            generate(cbCannon, "tf_weapon_cannon.txt", scriptsDir);
-            generate(cbSticky, "tf_weapon_pipebomblauncher.txt", scriptsDir);
-            generate(cbBottle, "tf_weapon_bottle.txt", scriptsDir);
-            generate(cbSwords, "tf_weapon_sword.txt", scriptsDir);
-            generate(cbCaber, "tf_weapon_stickbomb.txt", scriptsDir);
+            if (!chkBoxNoScout.isSelected()) {
+                generate(cbScattergun, "tf_weapon_scattergun.txt", scriptsDir);
+                generate(cbSodaPopper, "tf_weapon_soda_popper.txt", scriptsDir);
+                generate(cbShortstop, "tf_weapon_handgun_scout_primary.txt", scriptsDir);
+                generate(cbBabyFaceBlaster, "tf_weapon_pep_brawler_blaster.txt", scriptsDir);
+                generate(cbScoutPistol, "tf_weapon_pistol_scout.txt", scriptsDir);
+                generate(cbWinger, "tf_weapon_handgun_scout_secondary.txt", scriptsDir);
+                generate(cbClassic, "tf_weapon_cleaver.txt", scriptsDir);
+                generate(cbBonkDrink, "tf_weapon_lunchbox_drink.txt", scriptsDir);
+                generate(cbMadMilk, "tf_weapon_jar_milk.txt", scriptsDir);
+                generate(cbBat, "tf_weapon_bat.txt", scriptsDir);
+                generate(cbFishMelee, "tf_weapon_bat_fish.txt", scriptsDir);
+                generate(cbSandman, "tf_weapon_bat_wood.txt", scriptsDir);
+                generate(cbWrapAssassin, "tf_weapon_bat_giftwarp.txt", scriptsDir);
+            }
+            if (!chkBoxNoSoldier.isSelected()) {
+                generate(cbRocketLauncher, "tf_weapon_rocketlauncher.txt", scriptsDir);
+                generate(cbDirectHit, "tf_weapon_rocketlauncher_directhit.txt", scriptsDir);
+                generate(cbMangler, "tf_weapon_particle_cannon.txt", scriptsDir);
+                generate(cbAirStrike, "tf_weapon_rocketlauncher_airstrike.txt", scriptsDir);
+                generate(cbSoldierSG, "tf_weapon_shotgun_soldier.txt", scriptsDir);
+                generate(cbBuffs, "tf_weapon_buff_item.txt", scriptsDir);
+                generate(cbBison, "tf_weapon_raygun.txt", scriptsDir);
+                generate(cbShovel, "tf_weapon_shovel.txt", scriptsDir);
+                generate(cbSoldierKatana, "tf_weapon_katana.txt", scriptsDir);
+            }
+            if (!chkBoxNoPyro.isSelected()) {
+                generate(cbFlameThrower, "tf_weapon_flamethrower.txt", scriptsDir);
+                generate(cbDragonFury, "tf_weapon_rocketlauncher_fireball.txt", scriptsDir);
+                generate(cbPyroSG, "tf_weapon_shotgun_pyro.txt", scriptsDir);
+                generate(cbFlareGun, "tf_weapon_flaregun.txt", scriptsDir);
+                generate(cbManmelter, "tf_weapon_flaregun_revenge.txt", scriptsDir);
+                generate(cbThrusters, "tf_weapon_rocketpack.txt", scriptsDir);
+                generate(cbGasPasser, "tf_weapon_jar.txt", scriptsDir);
+                generate(cbAxe, "tf_weapon_fireaxe.txt", scriptsDir);
+                generate(cbHotHand, "tf_weapon_slap.txt", scriptsDir);
+            }
+            if (!chkBoxNoDemoman.isSelected()) {
+                generate(cbGrenadeLauncher, "tf_weapon_grenadelauncher.txt", scriptsDir);
+                generate(cbCannon, "tf_weapon_cannon.txt", scriptsDir);
+                generate(cbSticky, "tf_weapon_pipebomblauncher.txt", scriptsDir);
+                generate(cbBottle, "tf_weapon_bottle.txt", scriptsDir);
+                generate(cbSwords, "tf_weapon_sword.txt", scriptsDir);
+                generate(cbCaber, "tf_weapon_stickbomb.txt", scriptsDir);
 //            generate(cbDemoKatana, "tf_weapon_katana.txt", scriptsDir);
-            generate(cbMiniGun, "tf_weapon_minigun.txt",  scriptsDir);
-            generate(cbHeavySG, "tf_weapon_shotgun_hwg.txt", scriptsDir);
-            generate(cbFood, "tf_weapon_lunchbox.txt", scriptsDir);
-            generate(cbFists, "tf_weapon_fists.txt", scriptsDir);
-            generate(cbEngiSG, "tf_weapon_shotgun_primary.txt", scriptsDir);
-            generate(cbPomson, "tf_weapon_drg_pompson.txt", scriptsDir);
-            generate(cbRescueRanger, "tf_weapon_shotgun_building_rescue.txt", scriptsDir);
-            generate(cbFrontierJustice, "tf_weapon_sentry_revenge.txt", scriptsDir);
-            generate(cbEngiPistol, "tf_weapon_pistol.txt", scriptsDir);
-            generate(cbWrangler, "tf_weapon_laser_pointer.txt", scriptsDir);
-            generate(cbShortCircuit, "tf_weapon_mechanical_arm.txt", scriptsDir);
-            generate(cbWrench, "tf_weapon_wrench.txt", scriptsDir);
-            generate(cbGunslinger, "tf_weapon_robot_arm.txt", scriptsDir);
-            generate(cbSyringeGun, "tf_weapon_syringegun_medic.txt", scriptsDir);
-            generate(cbCrossbow, "tf_weapon_crossbow.txt", scriptsDir);
-            generate(cbMediGun, "tf_weapon_medigun.txt", scriptsDir);
-            generate(cbBonesaw, "tf_weapon_bonesaw.txt", scriptsDir);
-            generate(cbSniperRifle, "tf_weapon_sniperrifle.txt", scriptsDir);
-            generate(cbHuntsman, "tf_weapon_compound_bow.txt", scriptsDir);
-            generate(cbHitman, "tf_weapon_sniperrifle_decap.txt", scriptsDir);
-            generate(cbClassic, "tf_weapon_sniperrifle_classic.txt", scriptsDir);
-            generate(cbSMG, "tf_weapon_smg.txt", scriptsDir);
-            generate(cbCarbine, "tf_weapon_charged_smg.txt", scriptsDir);
+            }
+            if (!chkBoxNoHeavy.isSelected()) {
+                generate(cbMiniGun, "tf_weapon_minigun.txt",  scriptsDir);
+                generate(cbHeavySG, "tf_weapon_shotgun_hwg.txt", scriptsDir);
+                generate(cbFood, "tf_weapon_lunchbox.txt", scriptsDir);
+                generate(cbFists, "tf_weapon_fists.txt", scriptsDir);
+            }
+            if(!chkBoxNoEngineer.isSelected()) {
+                generate(cbEngiSG, "tf_weapon_shotgun_primary.txt", scriptsDir);
+                generate(cbPomson, "tf_weapon_drg_pompson.txt", scriptsDir);
+                generate(cbRescueRanger, "tf_weapon_shotgun_building_rescue.txt", scriptsDir);
+                generate(cbFrontierJustice, "tf_weapon_sentry_revenge.txt", scriptsDir);
+                generate(cbEngiPistol, "tf_weapon_pistol.txt", scriptsDir);
+                generate(cbWrangler, "tf_weapon_laser_pointer.txt", scriptsDir);
+                generate(cbShortCircuit, "tf_weapon_mechanical_arm.txt", scriptsDir);
+                generate(cbWrench, "tf_weapon_wrench.txt", scriptsDir);
+                generate(cbGunslinger, "tf_weapon_robot_arm.txt", scriptsDir);
+            }
+            if(!chkBoxNoMedic.isSelected()) {
+                generate(cbSyringeGun, "tf_weapon_syringegun_medic.txt", scriptsDir);
+                generate(cbCrossbow, "tf_weapon_crossbow.txt", scriptsDir);
+                generate(cbMediGun, "tf_weapon_medigun.txt", scriptsDir);
+                generate(cbBonesaw, "tf_weapon_bonesaw.txt", scriptsDir);
+            }
+            if (!chkBoxNoSniper.isSelected()) {
+                generate(cbSniperRifle, "tf_weapon_sniperrifle.txt", scriptsDir);
+                generate(cbHuntsman, "tf_weapon_compound_bow.txt", scriptsDir);
+                generate(cbHitman, "tf_weapon_sniperrifle_decap.txt", scriptsDir);
+                generate(cbClassic, "tf_weapon_sniperrifle_classic.txt", scriptsDir);
+                generate(cbSMG, "tf_weapon_smg.txt", scriptsDir);
+                generate(cbCarbine, "tf_weapon_charged_smg.txt", scriptsDir);
 //            generate(cbJarate, "tf_weapon_jar.txt", scriptsDir);
-            generate(cbKukri, "tf_weapon_club.txt", scriptsDir);
-            generate(cbRevolver, "tf_weapon_revolver.txt", scriptsDir);
-            generate(cbKnife, "tf_weapon_knife.txt", scriptsDir);
-            generate(cbSapper, "tf_weapon_sapper.txt", scriptsDir);
+                generate(cbKukri, "tf_weapon_club.txt", scriptsDir);
+            }
+            if (!chkBoxNoSpy.isSelected()) {
+                generate(cbRevolver, "tf_weapon_revolver.txt", scriptsDir);
+                generate(cbKnife, "tf_weapon_knife.txt", scriptsDir);
+                generate(cbSapper, "tf_weapon_sapper.txt", scriptsDir);
+            }
 
             System.out.println("The following files will be copied:\n" + crosshairsGenerate);
 

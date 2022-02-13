@@ -24,11 +24,11 @@
           <Menu mnemonicParsing="false" text="File">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#onImportClick" text="Import a crosshair" />
-                  <MenuItem mnemonicParsing="false" text="Manage crosshairs" />
-                  <MenuItem mnemonicParsing="false" text="Settings" />
+                  <MenuItem mnemonicParsing="false" text="Manage crosshairs" visible="false" />
+                  <MenuItem mnemonicParsing="false" text="Settings" visible="false" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Help" visible="false">
             <items>
                   <MenuItem mnemonicParsing="false" text="Documentation" />
               <MenuItem mnemonicParsing="false" onAction="#onMenuAboutClick" text="About" />
@@ -46,7 +46,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxIncludeScout" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoScout" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -57,7 +57,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -178,7 +177,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoSoldier" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -189,7 +188,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -291,7 +289,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoPyro" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -302,7 +300,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -478,7 +475,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoDemoman" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -489,7 +486,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -501,7 +497,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxIncludeScout1" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoHeavy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -512,7 +508,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -596,7 +591,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxIncludeScout11" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoEngineer" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -607,7 +602,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -705,7 +699,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxIncludeScout12" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoMedic" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -716,7 +710,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -800,7 +793,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxIncludeScout13" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoSniper" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -811,7 +804,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -907,7 +899,7 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxIncludeScout14" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Create a script for this class">
+                              <CheckBox fx:id="chkBoxNoSpy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -918,7 +910,6 @@
                                     <Tooltip text="Creates a custom crosshair script for this class" />
                                  </tooltip>
                               </CheckBox>
-                              <CheckBox disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="327.0" text="Use a single crosshair for all weapons" />
                            </children>
                         </HBox>
                      </top>
@@ -1008,7 +999,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <TextField fx:id="tfDirectory" prefHeight="25.0" prefWidth="323.0">
+            <TextField fx:id="tfDirectory" prefHeight="25.0" prefWidth="323.0" promptText="C:/">
                <HBox.margin>
                   <Insets />
                </HBox.margin></TextField>
