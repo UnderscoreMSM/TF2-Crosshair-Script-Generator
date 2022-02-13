@@ -356,32 +356,36 @@ public class AppController {
 
     public String createScript(String vmtFile) { // Assuming the size is 64x64
         String template = """
-                "crosshair"
+                WeaponData
                 {
-                    "file"            "vgui/replay/thumbnails/""";
-        template = template.concat(vmtFile + """
+                    TextureData
+                    {
+                        "crosshair"
+                        {
+                            "file"            "vgui/replay/thumbnails/""";
+        template = template.concat(removeExtension(vmtFile) + """
                 "
-                    "x"		        "0"
-                    "y"		        "0"
-                    "width"		    "64"
-                    "height"	    "64"
+                            "x"		        "0"
+                            "y"		        "0"
+                            "width"		    "64"
+                            "height"	    "64"
+                        }
+                    }
                 }""");
 
 
         return template;
     }
 
-    public boolean addFileToList(String crosshairName) { // true if the operation was successful, otherwise false
+    public void addFileToList(String crosshairName) {
         File vtfTemp = new File("crosshairs/" + crosshairName + ".vtf");
         File vmtTemp = new File("crosshairs/" + crosshairName + ".vmt");
         if (vtfTemp.exists() && vmtTemp.exists()) {
             if (!crosshairsGenerate.contains(vtfTemp) && !crosshairsGenerate.contains(vmtTemp)) {
                 crosshairsGenerate.add(vtfTemp);
                 crosshairsGenerate.add(vmtTemp);
-                return true;
             }
         }
         System.out.println("Files do not exist!");
-        return false;
     }
 }
