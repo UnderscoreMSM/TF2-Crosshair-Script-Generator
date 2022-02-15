@@ -3,12 +3,16 @@ package group.demo1;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
@@ -102,7 +106,6 @@ public class AppController {
         try {
             String targetDir = tfDirectory.getText();
             String scriptsDir = targetDir + "/Custom crosshairs/scripts";
-
             String destination = targetDir + "/Custom crosshairs/crosshairs/vgui/replay/thumbnails";
             File folder = new File(targetDir + "/Custom crosshairs");
             File scripts = new File(targetDir + "/Custom crosshairs/scripts");
@@ -408,5 +411,15 @@ public class AppController {
                 crosshairsGenerate.add(vmtTemp);
             }
         }
+    }
+
+    @FXML
+    protected void onManageClick() throws IOException {
+        System.out.println("Manage crosshairs clicked.");
+        FXMLLoader manageWindow = new FXMLLoader(AppController.class.getResource("manageGUI.fxml"));
+        Scene s = new Scene(manageWindow.load());
+        Stage stage = new Stage();
+        stage.setScene(s);
+        stage.show();
     }
 }

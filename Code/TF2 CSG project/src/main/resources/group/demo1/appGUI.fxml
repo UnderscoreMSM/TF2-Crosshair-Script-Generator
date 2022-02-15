@@ -24,6 +24,7 @@
           <Menu mnemonicParsing="false" text="File">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#onImportClick" text="Import a crosshair" />
+                  <MenuItem mnemonicParsing="false" onAction="#onManageClick" text="Manage crosshairs" />
                   <MenuItem mnemonicParsing="false" text="Manage crosshairs" visible="false" />
                   <MenuItem mnemonicParsing="false" text="Settings" visible="false" />
             </items>
