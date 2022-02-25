@@ -5,12 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import java.io.IOException;
+
+import java.io.*;
 
 public class ScriptApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ScriptApp.class.getResource("appGUI.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("appGUI.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("TF2 Crosshair Script Generator");
         stage.setScene(scene);
@@ -22,7 +23,6 @@ public class ScriptApp extends Application {
     }
 
     public static void main(String[] args) {
-
         launch();
     }
 }

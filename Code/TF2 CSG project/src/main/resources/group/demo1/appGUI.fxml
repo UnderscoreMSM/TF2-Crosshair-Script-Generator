@@ -29,10 +29,10 @@
                   <MenuItem mnemonicParsing="false" text="Settings" visible="false" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help" visible="false">
+          <Menu mnemonicParsing="false" text="Help">
             <items>
                   <MenuItem mnemonicParsing="false" text="Documentation" />
-              <MenuItem mnemonicParsing="false" onAction="#onMenuAboutClick" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#onAboutClick" text="About" />
             </items>
           </Menu>
         </menus>

@@ -1,47 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.demo1.ManageController">
    <center>
-      <TableView prefHeight="434.0" prefWidth="308.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableCrosshair" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="219.42852997779846" text="Crosshair" />
-          <TableColumn prefWidth="73.71427917480469" text="Size" />
+          <TableColumn prefWidth="296.5714416503906" text="Crosshair" />
+          <TableColumn minWidth="0.0" prefWidth="74.85711669921875" text="Size" />
         </columns>
       </TableView>
    </center>
    <right>
-      <VBox prefHeight="434.0" prefWidth="169.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="229.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="58.0" prefWidth="169.0">
-               <children>
-                  <Label text="Name" />
-                  <TextField maxWidth="150.0" />
-               </children>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="169.0">
-               <children>
-                  <Label text="Size" />
-                  <TextField maxWidth="150.0" prefHeight="25.0" prefWidth="145.0" promptText="64" />
-               </children>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </VBox>
+            <Button mnemonicParsing="false" text="Apply" />
+            <Button mnemonicParsing="false" text="Apply" />
          </children>
-         <padding>
-            <Insets top="10.0" />
-         </padding>
       </VBox>
    </right>
 </BorderPane>

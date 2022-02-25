@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -100,6 +97,7 @@ public class AppController {
 
     Alert alertAbout = new Alert(Alert.AlertType.INFORMATION);
     FilenameFilter filter = ((dir, name) -> name.toLowerCase().endsWith(".vtf")); // Lambda expression for filtering files
+    ObservableList<String> list = FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter)));
 
     @FXML
     protected void onGenerateClick() {
@@ -255,12 +253,6 @@ public class AppController {
     }
 
     @FXML
-    protected void onMenuAboutClick() {
-        alertAbout.setContentText("TF2 Crosshair Generator\nCreated by MSM");
-        alertAbout.show();
-    }
-
-    @FXML
     protected void onImportClick() throws IOException {
         FileChooser vtfDialog = new FileChooser();
         FileChooser vmtDialog = new FileChooser();
@@ -283,7 +275,6 @@ public class AppController {
     }
 
     public void initialize() {
-        ObservableList<String> list = FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter)));
         // Scout
         cbScattergun.setItems(list);
         cbSodaPopper.setItems(list);
@@ -367,8 +358,6 @@ public class AppController {
         cbRevolver.setItems(list);
         cbKnife.setItems(list);
         cbSapper.setItems(list);
-
-
     }
 
     public String removeExtension(String fileName) {
@@ -379,6 +368,9 @@ public class AppController {
         }
     }
 
+
+    // TODO Read from the VTF header to obtain the size of the selected crosshair
+    // TODO Add Reload animations file and sound files
     public String createScript(String vmtFile) { // Assuming the size is 64x64
         String template = """
                 WeaponData
@@ -415,11 +407,19 @@ public class AppController {
 
     @FXML
     protected void onManageClick() throws IOException {
-        System.out.println("Manage crosshairs clicked.");
-        FXMLLoader manageWindow = new FXMLLoader(AppController.class.getResource("manageGUI.fxml"));
-        Scene s = new Scene(manageWindow.load());
+        FXMLLoader manageWindow = new FXMLLoader(getClass().getResource("manageGUI.fxml"));
         Stage stage = new Stage();
-        stage.setScene(s);
+        stage.setScene(new Scene(manageWindow.load()));
+        stage.setTitle("Manage crosshairs");
+        stage.show();
+    }
+
+    @FXML
+    protected void onAboutClick() throws IOException {
+        FXMLLoader aboutWindow = new FXMLLoader(getClass().getResource("aboutGUI.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(aboutWindow.load()));
+        stage.setTitle("About");
         stage.show();
     }
 }
