@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER" prefHeight="49.0" prefWidth="293.0">
@@ -15,6 +14,11 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Label prefWidth="89.0" text="Version 0.0.1&#10;&#10;Created by MSM" textAlignment="CENTER" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="293.0">
+         <children>
+            <Label text="Licensed by the GNU General Public License v3" />
          </children>
       </HBox>
    </children>

@@ -104,12 +104,12 @@ public class AppController {
         try {
             String targetDir = tfDirectory.getText();
             String scriptsDir = targetDir + "/Custom crosshairs/scripts";
-            String destination = targetDir + "/Custom crosshairs/crosshairs/vgui/replay/thumbnails";
+            String destination = targetDir + "/Custom crosshairs/materials/vgui/replay/thumbnails";
             File folder = new File(targetDir + "/Custom crosshairs");
             File scripts = new File(targetDir + "/Custom crosshairs/scripts");
-            File crosshairs = new File(targetDir + "/Custom crosshairs/crosshairs");
-            File vguiDir = new File(targetDir + "/Custom crosshairs/crosshairs/vgui");
-            File replayDir = new File(targetDir + "/Custom crosshairs/crosshairs/vgui/replay");
+            File crosshairs = new File(targetDir + "/Custom crosshairs/materials");
+            File vguiDir = new File(targetDir + "/Custom crosshairs/materials/vgui");
+            File replayDir = new File(targetDir + "/Custom crosshairs/materials/vgui/replay");
             File thumbnailsDir = new File(destination);
 
             boolean boolFolder = folder.mkdir();
@@ -370,7 +370,6 @@ public class AppController {
 
 
     // TODO Read from the VTF header to obtain the size of the selected crosshair
-    // TODO Add Reload animations file and sound files
     public String createScript(String vmtFile) { // Assuming the size is 64x64
         String template = """
                 WeaponData
