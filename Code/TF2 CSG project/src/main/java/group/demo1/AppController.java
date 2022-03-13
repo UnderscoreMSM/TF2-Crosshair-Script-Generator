@@ -18,6 +18,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class AppController {
     File crosshairFolder = new File("crosshairs");
@@ -95,7 +96,6 @@ public class AppController {
     @FXML
     private CheckBox chkBoxNoMedic, chkBoxNoSniper, chkBoxNoSpy;
 
-    Alert alertAbout = new Alert(Alert.AlertType.INFORMATION);
     FilenameFilter filter = ((dir, name) -> name.toLowerCase().endsWith(".vtf")); // Lambda expression for filtering files
     ObservableList<String> list = FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter)));
 
@@ -241,7 +241,20 @@ public class AppController {
     public void generate(ChoiceBox<String> cbWeapon, String weaponTXT, String folderDir) throws IOException {
         addFileToList(removeExtension(cbWeapon.getValue()));
         FileWriter script = new FileWriter(folderDir + "/" + weaponTXT);
-        script.write(createScript(removeExtension(cbWeapon.getValue()) + ".vmt")); // Assuming the VMT file exists
+//        script.write(createScript(removeExtension(cbWeapon.getValue()) + ".vmt")); // Assuming the VMT file exists
+        File template = new File("templates/" + weaponTXT);
+        String contents = "";
+        Scanner scanner = new Scanner(template);
+
+        while (scanner.hasNextLine()) {
+            contents = contents.concat(scanner.nextLine() + "\n");
+        }
+        System.out.println("***** FILE CONTENTS *****");
+        System.out.println(contents);
+        System.out.println("*************************");
+
+        contents = contents.replace("vgui/replay/thumbnails/", "vgui/replay/thumbnails/" + removeExtension(cbWeapon.getValue()));
+        script.write(contents);
         script.close();
     }
 
@@ -370,7 +383,7 @@ public class AppController {
 
 
     // TODO Read from the VTF header to obtain the size of the selected crosshair
-    public String createScript(String vmtFile) { // Assuming the size is 64x64
+    public String createScript(String vmtFile) { // Assuming the size is 64x64, for now
         String template = """
                 WeaponData
                 {
