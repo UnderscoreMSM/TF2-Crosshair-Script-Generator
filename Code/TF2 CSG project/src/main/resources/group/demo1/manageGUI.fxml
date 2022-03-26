@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.demo1.ManageController">
    <center>
       <TableView fx:id="tableCrosshair" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -17,10 +16,9 @@
       </TableView>
    </center>
    <right>
-      <VBox prefHeight="400.0" prefWidth="229.0" BorderPane.alignment="CENTER">
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="400.0" prefWidth="229.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Apply" />
-            <Button mnemonicParsing="false" text="Apply" />
+            <Button mnemonicParsing="false" text="Delete" />
          </children>
       </VBox>
    </right>
