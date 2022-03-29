@@ -18,7 +18,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="36.0" prefWidth="293.0">
          <children>
-            <Label text="Licensed by the GNU General Public License v3" />
+            <Label text="Licensed under the GNU General Public License v3" />
          </children>
       </HBox>
    </children>
