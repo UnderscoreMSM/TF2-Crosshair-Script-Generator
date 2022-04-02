@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="223db1ca-46b4-4a5e-9f7e-a0f7e2bdefef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crosshairs/bigcross.vmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crosshairs/bigcross.vtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/ManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/ManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/group/demo1/aboutGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/group/demo1/aboutGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/group/demo1/manageGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/group/demo1/manageGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/ManageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/ManageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/aboutGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/aboutGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/manageGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/manageGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +118,7 @@
       <workItem from="1648308440176" duration="818000" />
       <workItem from="1648457884467" duration="1746000" />
       <workItem from="1648589340048" duration="2300000" />
+      <workItem from="1648901409181" duration="1117000" />
     </task>
     <servers />
   </component>

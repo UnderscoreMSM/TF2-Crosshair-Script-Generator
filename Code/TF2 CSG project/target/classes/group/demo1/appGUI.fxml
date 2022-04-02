@@ -8,7 +8,6 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
@@ -62,113 +61,110 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
+                                          <Label text="Scattergun, Force-A-Nature, Back Scatter" wrapText="true" />
+                                          <Label text="Baby Face's Blaster" />
+                                          <Label text="Shortstop" />
+                                          <Label text="Soda Popper" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="63.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbScattergun" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <Label text="Scattergun, Force-A-Nature, Back Scatter" wrapText="true" />
-                                                <Label text="Baby Face's Blaster" />
-                                                <Label text="Shortstop" />
-                                                <Label text="Soda Popper" />
+                                                <ChoiceBox fx:id="cbBabyFaceBlaster" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                                <ChoiceBox fx:id="cbShortstop" prefHeight="25.0" prefWidth="194.0" value="Default" />
+                                                <ChoiceBox fx:id="cbSodaPopper" prefWidth="150.0" value="Default" />
                                              </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="63.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbScattergun" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbBabyFaceBlaster" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbShortstop" prefHeight="25.0" prefWidth="194.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbSodaPopper" prefWidth="150.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
-                                       <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Pistol" />
-                                                <Label text="Mad Milk" />
-                                                <Label text="Flying Guillotine" />
-                                                <Label text="Bonk! Atomic Punch, Crit-a-Cola" wrapText="true" />
-                                                <Label text="Winger,&#10;Pretty Boy's Pocket Pistol" wrapText="true" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbScoutPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                                <ChoiceBox fx:id="cbMadMilk" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                                <ChoiceBox fx:id="cbCleaver" prefHeight="25.0" prefWidth="252.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="45.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbBonkDrink" prefHeight="25.0" prefWidth="230.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbWinger" prefHeight="25.0" prefWidth="230.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="30.0">
-                                             <children>
-                                                <Label prefHeight="102.0" prefWidth="118.0" text="Bat,&#10;Candy Cane,&#10;Fan O' War,&#10;Boston Basher,&#10;Sun-on-a-Stick,&#10;Atomizer">
-                                                   <VBox.margin>
-                                                      <Insets />
-                                                   </VBox.margin></Label>
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="39.0">
-                                                   <children>
-                                                      <Label text="Sandman" />
-                                                      <Label text="Holy Mackerel" />
-                                                      <Label text="Wrap Assasin" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="105.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbBat" prefWidth="150.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbSandman" prefWidth="150.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbFishMelee" prefWidth="150.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbWrapAssassin" prefWidth="150.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Pistol" />
+                                          <Label text="Mad Milk" />
+                                          <Label text="Flying Guillotine" />
+                                          <Label text="Bonk! Atomic Punch, Crit-a-Cola" wrapText="true" />
+                                          <Label text="Winger,&#10;Pretty Boy's Pocket Pistol" wrapText="true" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbScoutPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ChoiceBox fx:id="cbMadMilk" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ChoiceBox fx:id="cbCleaver" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="45.0">
+                                             <children>
+                                                <ChoiceBox fx:id="cbBonkDrink" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                                <ChoiceBox fx:id="cbWinger" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="30.0">
+                                       <children>
+                                          <Label prefHeight="102.0" prefWidth="118.0" text="Bat,&#10;Candy Cane,&#10;Fan O' War,&#10;Boston Basher,&#10;Sun-on-a-Stick,&#10;Atomizer">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="39.0">
+                                             <children>
+                                                <Label text="Sandman" />
+                                                <Label text="Holy Mackerel" />
+                                                <Label text="Wrap Assasin" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="105.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbBat" prefWidth="150.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                                             <children>
+                                                <ChoiceBox fx:id="cbSandman" prefWidth="150.0" value="Default" />
+                                                <ChoiceBox fx:id="cbFishMelee" prefWidth="150.0" value="Default" />
+                                                <ChoiceBox fx:id="cbWrapAssassin" prefWidth="150.0" value="Default" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>
@@ -193,94 +189,90 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices3" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
+                                          <Label text="Rocket Launcher,&#10;Black Box,&#10;Liberty Launcher,&#10;Beggar's Bazooka" wrapText="true" />
+                                          <Label text="Air Strike" />
+                                          <Label text="Cow Mangler 5000" />
+                                          <Label text="Direct Hit" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbRocketLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <Label text="Rocket Launcher,&#10;Black Box,&#10;Liberty Launcher,&#10;Beggar's Bazooka" wrapText="true" />
-                                                <Label text="Air Strike" />
-                                                <Label text="Cow Mangler 5000" />
-                                                <Label text="Direct Hit" />
+                                                <ChoiceBox fx:id="cbAirStrike" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                                <ChoiceBox fx:id="cbMangler" prefHeight="25.0" prefWidth="194.0" value="Default" />
+                                                <ChoiceBox fx:id="cbDirectHit" prefWidth="150.0" value="Default" />
                                              </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbRocketLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbAirStrike" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbMangler" prefHeight="25.0" prefWidth="194.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbDirectHit" prefWidth="150.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
-                                       <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Shotgun,&#10;Reserve Shooter,&#10;Panic Attack" />
-                                                <Label text="Buff Banner,&#10;Battalion's Backup,&#10;Concheror" />
-                                                <Label text="Righteous Bison" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="60.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbSoldierSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="65.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbBuffs" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbBison" prefHeight="25.0" prefWidth="252.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Shovel,&#10;Disciplinary Action,&#10;Market Gardener,&#10;Equalizer,&#10;Escape Plan,&#10;Pain Train" />
-                                                <Label text="Half-Zatoichi" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="113.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbShovel" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbSoldierKatana" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Shotgun,&#10;Reserve Shooter,&#10;Panic Attack" />
+                                          <Label text="Buff Banner,&#10;Battalion's Backup,&#10;Concheror" />
+                                          <Label text="Righteous Bison" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="60.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbSoldierSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="65.0">
+                                             <children>
+                                                <ChoiceBox fx:id="cbBuffs" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                                <ChoiceBox fx:id="cbBison" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Shovel,&#10;Disciplinary Action,&#10;Market Gardener,&#10;Equalizer,&#10;Escape Plan,&#10;Pain Train" />
+                                          <Label text="Half-Zatoichi" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="113.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbShovel" prefWidth="150.0" value="Default" />
+                                          <ChoiceBox fx:id="cbSoldierKatana" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>
@@ -305,174 +297,92 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices1" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Flame Thrower,&#10;Backburner,&#10;Degreaser,&#10;Phlogistinator" />
-                                                <Label text="Dragon's Fury" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbFlameThrower" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                                <ChoiceBox fx:id="cbDragonFury" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <Label text="Flame Thrower,&#10;Backburner,&#10;Degreaser,&#10;Phlogistinator" />
+                                          <Label text="Dragon's Fury" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Shotgun,&#10;Reserve Shooter,&#10;Panic Attack" />
-                                                <Label text="Flare Gun,&#10;Detonator,&#10;Scorch Shot" />
-                                                <Label text="Manmelter" />
-                                                <Label text="Thermal Thruster" />
-                                                <Label text="Gas Passer" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets bottom="10.0" left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="64.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbPyroSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                                <ChoiceBox fx:id="cbFlareGun" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbManmelter" prefHeight="25.0" prefWidth="230.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbThrusters" prefHeight="25.0" prefWidth="230.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbGasPasser" prefHeight="25.0" prefWidth="252.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <ChoiceBox fx:id="cbFlameThrower" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ChoiceBox fx:id="cbDragonFury" prefHeight="25.0" prefWidth="192.0" value="Default" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Fire Axe,&#10;Axtinguisher,&#10;Homewrecker,&#10;Powerjack,&#10;Back Scratcher,&#10;Sharpened Volcano Fragment,&#10;Third Degree,&#10;Neon Annihilator" />
-                                                <Label text="Hot Hand" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="147.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbAxe" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbHotHand" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Shotgun,&#10;Reserve Shooter,&#10;Panic Attack" />
+                                          <Label text="Flare Gun,&#10;Detonator,&#10;Scorch Shot" />
+                                          <Label text="Manmelter" />
+                                          <Label text="Thermal Thruster" />
+                                          <Label text="Gas Passer" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="64.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbPyroSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ChoiceBox fx:id="cbFlareGun" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                                             <children>
+                                                <ChoiceBox fx:id="cbManmelter" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                                <ChoiceBox fx:id="cbThrusters" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                                <ChoiceBox fx:id="cbGasPasser" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Fire Axe,&#10;Axtinguisher,&#10;Homewrecker,&#10;Powerjack,&#10;Back Scratcher,&#10;Sharpened Volcano Fragment,&#10;Third Degree,&#10;Neon Annihilator" />
+                                          <Label text="Hot Hand" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="147.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbAxe" prefWidth="150.0" value="Default" />
+                                          <ChoiceBox fx:id="cbHotHand" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>
             <Tab text="Demoman">
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                        <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="490.0" prefWidth="898.0">
-                                 <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
-                                       <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Grenade Launcher,&#10;Loch-n-Load,&#10;Iron Bomber" />
-                                                <Label text="Loose Cannon" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="65.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbGrenadeLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                                <ChoiceBox fx:id="cbCannon" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
-                                       <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Sticky Bomb Launcher,&#10;Scottish Resistance,&#10;Quickiebomb Launcher" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="65.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbSticky" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Bottle" />
-                                                <Label text="Ullapool Caber" />
-                                                <Label text="Half-Zatoichi" />
-                                                <Label text="Eyelander,&#10;Scotsman's Skullcutter,&#10;Claidheamh Mòr,&#10;Persian Persuader,&#10;Pain Train" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbBottle" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbCaber" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbDemoKatana" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbSwords" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </HBox>
-                           </content>
-                        </ScrollPane>
-                     </center>
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
@@ -490,6 +400,80 @@
                            </children>
                         </HBox>
                      </top>
+                     <center>
+                        <HBox prefHeight="490.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Grenade Launcher,&#10;Loch-n-Load,&#10;Iron Bomber" />
+                                          <Label text="Loose Cannon" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="65.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbGrenadeLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ChoiceBox fx:id="cbCannon" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Sticky Bomb Launcher,&#10;Scottish Resistance,&#10;Quickiebomb Launcher" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="65.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbSticky" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Bottle" />
+                                          <Label text="Ullapool Caber" />
+                                          <Label text="Half-Zatoichi" />
+                                          <Label text="Eyelander,&#10;Scotsman's Skullcutter,&#10;Claidheamh Mòr,&#10;Persian Persuader,&#10;Pain Train" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbBottle" prefWidth="150.0" value="Default" />
+                                          <ChoiceBox fx:id="cbCaber" prefWidth="150.0" value="Default" />
+                                          <ChoiceBox fx:id="cbDemoKatana" prefWidth="150.0" value="Default" />
+                                          <ChoiceBox fx:id="cbSwords" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </center>
                   </BorderPane>
                </content></Tab>
             <Tab text="Heavy">
@@ -513,76 +497,72 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices2" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Minigun,&#10;Brass Beast,&#10;Natascha,&#10;Tomislav,&#10;Huo-Long Heater" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="30.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbMiniGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <Label text="Minigun,&#10;Brass Beast,&#10;Natascha,&#10;Tomislav,&#10;Huo-Long Heater" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="30.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Shotgun,&#10;Family Business,&#10;Panic Attack" />
-                                                <Label text="Sandvich,&#10;Buffalo Steak Sandvich,&#10;Dalokohs Bar,&#10;Second Banana" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="60.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbHeavySG" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                                <ChoiceBox fx:id="cbFood" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <ChoiceBox fx:id="cbMiniGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Fists (all)" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbFists" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Shotgun,&#10;Family Business,&#10;Panic Attack" />
+                                          <Label text="Sandvich,&#10;Buffalo Steak Sandvich,&#10;Dalokohs Bar,&#10;Second Banana" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="60.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbHeavySG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ChoiceBox fx:id="cbFood" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Fists (all)" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbFists" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>
@@ -607,90 +587,86 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices21" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
+                                          <Label text="Shotgun,&#10;Widowmaker,&#10;Panic Attack" />
+                                          <Label text="Frontier Justice" />
+                                          <Label text="Pomson 6000" />
+                                          <Label text="Rescue Ranger" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="64.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbEngiSG" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <Label text="Shotgun,&#10;Widowmaker,&#10;Panic Attack" />
-                                                <Label text="Frontier Justice" />
-                                                <Label text="Pomson 6000" />
-                                                <Label text="Rescue Ranger" />
+                                                <ChoiceBox fx:id="cbFrontierJustice" prefWidth="150.0" value="Default" />
+                                                <ChoiceBox fx:id="cbPomson" prefWidth="150.0" value="Default" />
+                                                <ChoiceBox fx:id="cbRescueRanger" prefHeight="25.0" prefWidth="192.0" value="Default" />
                                              </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="64.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbEngiSG" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbFrontierJustice" prefWidth="150.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbPomson" prefWidth="150.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbRescueRanger" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
-                                       <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Pistol" />
-                                                <Label text="Wrangler" />
-                                                <Label text="Short Circuit" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbEngiPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                                <ChoiceBox fx:id="cbWrangler" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                                <ChoiceBox fx:id="cbShortCircuit" prefHeight="25.0" prefWidth="252.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Wrench,&#10;Eureka Effect,&#10;Southern Hospitality,&#10;Jag" />
-                                                <Label text="Gunslinger" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="80.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbWrench" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbGunslinger" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Pistol" />
+                                          <Label text="Wrangler" />
+                                          <Label text="Short Circuit" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbEngiPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ChoiceBox fx:id="cbWrangler" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ChoiceBox fx:id="cbShortCircuit" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Wrench,&#10;Eureka Effect,&#10;Southern Hospitality,&#10;Jag" />
+                                          <Label text="Gunslinger" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="80.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbWrench" prefWidth="150.0" value="Default" />
+                                          <ChoiceBox fx:id="cbGunslinger" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>
@@ -715,76 +691,72 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices22" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Syringe Gun,&#10;Blutsauger,&#10;Overdose" />
-                                                <Label text="Crusader's Crossbow" wrapText="true" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="60.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbSyringeGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                                <ChoiceBox fx:id="cbCrossbow" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <Label text="Syringe Gun,&#10;Blutsauger,&#10;Overdose" />
+                                          <Label text="Crusader's Crossbow" wrapText="true" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="60.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Medi Gun (all)" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbMediGun" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <ChoiceBox fx:id="cbSyringeGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ChoiceBox fx:id="cbCrossbow" prefHeight="25.0" prefWidth="192.0" value="Default" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Bonesaw (all)" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbBonesaw" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Medi Gun (all)" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbMediGun" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Bonesaw (all)" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbBonesaw" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>
@@ -809,88 +781,84 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices23" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
+                                          <Label text="Sniper Rifle,&#10;Bazaar Bargain,&#10;Machina,&#10;Sydney Sleeper" />
+                                          <Label text="Classic" />
+                                          <Label text="Hitman's Heatmaker" />
+                                          <Label text="Huntsman" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbSniperRifle" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <Label text="Sniper Rifle,&#10;Bazaar Bargain,&#10;Machina,&#10;Sydney Sleeper" />
-                                                <Label text="Classic" />
-                                                <Label text="Hitman's Heatmaker" />
-                                                <Label text="Huntsman" />
+                                                <ChoiceBox fx:id="cbClassic" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                                <ChoiceBox fx:id="cbHitman" prefWidth="150.0" value="Default" />
+                                                <ChoiceBox fx:id="cbHuntsman" prefHeight="25.0" prefWidth="194.0" value="Default" />
                                              </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbSniperRifle" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                                                   <children>
-                                                      <ChoiceBox fx:id="cbClassic" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbHitman" prefWidth="150.0" value="Default" />
-                                                      <ChoiceBox fx:id="cbHuntsman" prefHeight="25.0" prefWidth="194.0" value="Default" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
-                                       <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="SMG" />
-                                                <Label text="Cleaner's Carbine" />
-                                                <Label text="Jarate" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbSMG" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                                <ChoiceBox fx:id="cbCarbine" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                                <ChoiceBox fx:id="cbJarate" prefHeight="25.0" prefWidth="252.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Kukri (all)" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbKukri" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="SMG" />
+                                          <Label text="Cleaner's Carbine" />
+                                          <Label text="Jarate" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbSMG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ChoiceBox fx:id="cbCarbine" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ChoiceBox fx:id="cbJarate" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Kukri (all)" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbKukri" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>
@@ -915,74 +883,70 @@
                         </HBox>
                      </top>
                      <center>
-                        <ScrollPane fx:id="scrollChoices24" fitToWidth="true" BorderPane.alignment="CENTER">
-                           <content>
-                              <HBox prefHeight="452.0" prefWidth="898.0">
+                        <HBox prefHeight="452.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="589.0" prefWidth="265.0">
                                  <children>
-                                    <HBox prefHeight="589.0" prefWidth="265.0">
+                                    <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="153.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Revolver (all)" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="30.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbRevolver" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <Label text="Revolver (all)" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="30.0">
                                        <children>
-                                          <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <Label text="Knife (all)" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
-                                             <children>
-                                                <ChoiceBox fx:id="cbKnife" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
+                                          <ChoiceBox fx:id="cbRevolver" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="589.0" prefWidth="293.0">
-                                       <children>
-                                          <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
-                                             <children>
-                                                <Label text="Sapper (all)" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets left="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                          <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
-                                             <children>
-                                                <ChoiceBox fx:id="cbSapper" prefWidth="150.0" value="Default" />
-                                             </children>
-                                             <HBox.margin>
-                                                <Insets right="10.0" top="20.0" />
-                                             </HBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
                                  </children>
                               </HBox>
-                           </content>
-                        </ScrollPane>
+                              <HBox prefHeight="589.0" prefWidth="318.0" style="-fx-background-color: e6e6e6;">
+                                 <children>
+                                    <VBox prefHeight="589.0" prefWidth="177.0" spacing="39.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <Label text="Knife (all)" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
+                                       <children>
+                                          <ChoiceBox fx:id="cbKnife" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="589.0" prefWidth="293.0">
+                                 <children>
+                                    <VBox prefHeight="569.0" prefWidth="171.0" spacing="39.0">
+                                       <children>
+                                          <Label text="Sapper (all)" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
+                                       <children>
+                                          <ChoiceBox fx:id="cbSapper" prefWidth="150.0" value="Default" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
                      </center>
                   </BorderPane>
                </content></Tab>

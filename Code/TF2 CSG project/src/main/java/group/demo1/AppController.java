@@ -24,7 +24,8 @@ public class AppController {
     File crosshairFolder = new File("crosshairs");
     ArrayList<File> crosshairsGenerate = new ArrayList<>();
 
-    @FXML // scattergun includes force-a-nature and back scatter
+    // Some choiceBoxes are used for multiple weapons
+    @FXML
     private ChoiceBox<String> cbScattergun, cbSodaPopper, cbShortstop, cbBabyFaceBlaster;
     @FXML
     private ChoiceBox<String> cbScoutPistol, cbWinger, cbCleaver, cbBonkDrink, cbMadMilk;
@@ -102,7 +103,6 @@ public class AppController {
     @FXML
     protected void onGenerateClick() throws IOException {
         String targetDir = tfDirectory.getText();
-        String scriptsDir = targetDir + "/Custom crosshairs/scripts";
         String destination = targetDir + "/Custom crosshairs/materials/vgui/replay/thumbnails";
         File folder = new File(targetDir + "/Custom crosshairs");
         File scripts = new File(targetDir + "/Custom crosshairs/scripts");
