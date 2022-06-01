@@ -1,8 +1,9 @@
 # TF2 Crosshair Script Generator
+![DL_Counter](https://img.shields.io/github/downloads/UnderscoreMSM/TF2-Crosshair-Script-Generator/total) <br>
 A GUI program that aims to make creating weapon specific scripts very easy.
 
 ## Download
-*Java is required.*
+*Java is required.* <br>
 [Download](https://github.com/UnderscoreMSM/TF2-Crosshair-Script-Generator/releases) (GitHub link)
 
 ## Screenshots
