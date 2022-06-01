@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223db1ca-46b4-4a5e-9f7e-a0f7e2bdefef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/group/demo1/appGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="24oicXFxaRpnQky0r7zqzvBn25m" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
