@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223db1ca-46b4-4a5e-9f7e-a0f7e2bdefef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -31,16 +32,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../README.md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java fps/build.gradle" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4229885" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RunAnythingCache">
@@ -119,7 +125,15 @@
       <workItem from="1648589340048" duration="2300000" />
       <workItem from="1648901409181" duration="1117000" />
       <workItem from="1654086215527" duration="590000" />
-      <workItem from="1654087513438" duration="328000" />
+      <workItem from="1654087513438" duration="397000" />
+      <workItem from="1654295255580" duration="2651000" />
+      <workItem from="1654298995585" duration="761000" />
+      <workItem from="1654357334322" duration="2488000" />
+      <workItem from="1654360750210" duration="82000" />
+      <workItem from="1654360845674" duration="148000" />
+      <workItem from="1654472949131" duration="29000" />
+      <workItem from="1656014979195" duration="580000" />
+      <workItem from="1657720293145" duration="1398000" />
     </task>
     <servers />
   </component>

@@ -29,6 +29,8 @@ public class ManageController {
         } else {
             System.out.println("Deletion failed for " + fileName);
         }
+        lvCrosshairs.getItems().clear();
+        lvCrosshairs.getItems().addAll(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
     }
 
     public String removeExtension(String fileName) {
