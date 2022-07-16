@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Arrays;
 
+// TODO: refresh choiceboxes after deleting a crosshair
 public class ManageController {
     File crosshairFolder = new File("crosshairs");
     FilenameFilter filter = ((dir, name) -> name.toLowerCase().endsWith(".vtf")); // Lambda expression for filtering files

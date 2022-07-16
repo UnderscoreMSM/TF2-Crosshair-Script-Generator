@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223db1ca-46b4-4a5e-9f7e-a0f7e2bdefef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TF2 CSG project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TF2 CSG project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/ManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/ManageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java fps/build.gradle" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4229885" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -58,6 +60,7 @@
     <configuration name="ScriptApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="group.demo1.ScriptApp" />
       <module name="TF2 CSG project" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Java libraries\javafx-sdk-17.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="group.demo1.*" />
@@ -133,7 +136,10 @@
       <workItem from="1654360845674" duration="148000" />
       <workItem from="1654472949131" duration="29000" />
       <workItem from="1656014979195" duration="580000" />
-      <workItem from="1657720293145" duration="1398000" />
+      <workItem from="1657720293145" duration="2230000" />
+      <workItem from="1657816658712" duration="1867000" />
+      <workItem from="1657826588194" duration="585000" />
+      <workItem from="1657975364728" duration="884000" />
     </task>
     <servers />
   </component>

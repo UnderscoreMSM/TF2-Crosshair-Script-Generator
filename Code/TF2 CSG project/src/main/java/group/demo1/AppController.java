@@ -280,9 +280,53 @@ public class AppController {
                 System.out.println("Import failed! Files names are not identical");
             }
         }
+        // Refreshes the choiceboxes
+        list = FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter)));
+        refresh();
     }
 
     public void initialize() {
+        refresh();
+    }
+
+    public String removeExtension(String fileName) {
+        if (fileName.contains(".")) {
+            return fileName.substring(0, fileName.lastIndexOf("."));
+        } else {
+            return null;
+        }
+    }
+
+    public void addFileToList(String crosshairName) { // Eleminates duplicate copies
+        File vtfTemp = new File("crosshairs/" + crosshairName + ".vtf");
+        File vmtTemp = new File("crosshairs/" + crosshairName + ".vmt");
+        if (vtfTemp.exists() && vmtTemp.exists()) {
+            if (!crosshairsGenerate.contains(vtfTemp) && !crosshairsGenerate.contains(vmtTemp)) {
+                crosshairsGenerate.add(vtfTemp);
+                crosshairsGenerate.add(vmtTemp);
+            }
+        }
+    }
+
+    @FXML
+    protected void onManageClick() throws IOException {
+        FXMLLoader manageWindow = new FXMLLoader(getClass().getResource("manageGUI.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(manageWindow.load()));
+        stage.setTitle("Manage crosshairs");
+        stage.show();
+    }
+
+    @FXML
+    protected void onAboutClick() throws IOException {
+        FXMLLoader aboutWindow = new FXMLLoader(getClass().getResource("aboutGUI.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(aboutWindow.load()));
+        stage.setTitle("About");
+        stage.show();
+    }
+
+    public void refresh() {
         // Scout
         cbScattergun.setItems(list);
         cbSodaPopper.setItems(list);
@@ -366,42 +410,5 @@ public class AppController {
         cbRevolver.setItems(list);
         cbKnife.setItems(list);
         cbSapper.setItems(list);
-    }
-
-    public String removeExtension(String fileName) {
-        if (fileName.contains(".")) {
-            return fileName.substring(0, fileName.lastIndexOf("."));
-        } else {
-            return null;
-        }
-    }
-
-    public void addFileToList(String crosshairName) { // Eleminates duplicate copies
-        File vtfTemp = new File("crosshairs/" + crosshairName + ".vtf");
-        File vmtTemp = new File("crosshairs/" + crosshairName + ".vmt");
-        if (vtfTemp.exists() && vmtTemp.exists()) {
-            if (!crosshairsGenerate.contains(vtfTemp) && !crosshairsGenerate.contains(vmtTemp)) {
-                crosshairsGenerate.add(vtfTemp);
-                crosshairsGenerate.add(vmtTemp);
-            }
-        }
-    }
-
-    @FXML
-    protected void onManageClick() throws IOException {
-        FXMLLoader manageWindow = new FXMLLoader(getClass().getResource("manageGUI.fxml"));
-        Stage stage = new Stage();
-        stage.setScene(new Scene(manageWindow.load()));
-        stage.setTitle("Manage crosshairs");
-        stage.show();
-    }
-
-    @FXML
-    protected void onAboutClick() throws IOException {
-        FXMLLoader aboutWindow = new FXMLLoader(getClass().getResource("aboutGUI.fxml"));
-        Stage stage = new Stage();
-        stage.setScene(new Scene(aboutWindow.load()));
-        stage.setTitle("About");
-        stage.show();
     }
 }
