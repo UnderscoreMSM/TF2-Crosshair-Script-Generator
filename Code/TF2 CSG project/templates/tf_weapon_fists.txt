@@ -69,8 +69,8 @@ WeaponData
 				"file"		"vgui/replay/thumbnails/"
 				"x"		"0"
 				"y"		"0"
-				"width"		"64"
-				"height"	"64"
+				"width"		"size_W"
+				"height"	"size_H"
 		}
 		"autoaim"
 		{

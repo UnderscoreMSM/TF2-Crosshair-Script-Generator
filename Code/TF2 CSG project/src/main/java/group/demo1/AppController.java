@@ -10,12 +10,10 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.FilenameFilter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -235,7 +233,21 @@ public class AppController {
     }
 
     public void generate(ChoiceBox<String> cbWeapon, String weaponTXT, File folderDir) throws IOException {
+        //
+        // "Default" choice is causing the program to crash upon generation
+        //
+
+        //
+        // TODO See if you can read crosshairs as binary data to support crosshairs larger than 255
+        //
         String crosshair = removeExtension(cbWeapon.getValue());
+        System.out.println(cbWeapon.getValue());
+        InputStream in = new FileInputStream("crosshairs/" + cbWeapon.getValue());
+        DataInputStream crosshairData = new DataInputStream(in);
+        crosshairData.skipBytes(17); // Skips over to the width
+        int width = crosshairData.readUnsignedShort();
+        int height = crosshairData.readUnsignedShort();
+
         FileWriter script = new FileWriter(folderDir.getPath() + "/" + weaponTXT);
         File template = new File("templates/" + weaponTXT);
         String contents = "";
@@ -246,7 +258,11 @@ public class AppController {
         }
         scanner.close();
 
+        // Writes crosshair data into the script
         contents = contents.replace("vgui/replay/thumbnails/", "vgui/replay/thumbnails/" + crosshair);
+        contents = contents.replace("size_W", width + "");
+        contents = contents.replace("size_H", height + "");
+
         script.write(contents);
         script.close();
         addFileToList(crosshair);
