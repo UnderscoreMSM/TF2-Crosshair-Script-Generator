@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223db1ca-46b4-4a5e-9f7e-a0f7e2bdefef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demo1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/TF2 CSG project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TF2 CSG project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/ScriptApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/AppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/ManageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/ManageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/group/demo1/ScriptApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/group/demo1/ScriptApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tf_weapon_wrench.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tf_weapon_wrench.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/group/demo1/AppController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +155,11 @@
       <workItem from="1666085955533" duration="601000" />
       <workItem from="1666087763874" duration="343000" />
       <workItem from="1666181196696" duration="1240000" />
+      <workItem from="1666184757382" duration="992000" />
+      <workItem from="1666257173463" duration="199000" />
+      <workItem from="1666262906086" duration="208000" />
+      <workItem from="1666273356920" duration="11000" />
+      <workItem from="1666513011509" duration="636000" />
     </task>
     <servers />
   </component>

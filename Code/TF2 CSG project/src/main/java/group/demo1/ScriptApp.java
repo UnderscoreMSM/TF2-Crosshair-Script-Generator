@@ -8,9 +8,7 @@ import javafx.stage.Stage;
 
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Arrays;
+
 
 public class ScriptApp extends Application {
     @Override
@@ -24,16 +22,7 @@ public class ScriptApp extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) throws IOException {
-        byte[] byteArray = Files.readAllBytes(Paths.get("C:\\Users\\Mohammed\\Desktop\\_CryLink.vtf"));
-//        byte[] byteArray = Files.readAllBytes(Paths.get("C:\\Users\\Mohammed\\Desktop\\brackets.vtf"));
-//        InputStream balls = new FileInputStream("C:\\Users\\Mohammed\\Desktop\\_CryLink.vtf");
-//        DataInputStream poop = new DataInputStream(balls);
-//        System.out.println(poop);
-        System.out.println(Arrays.toString(byteArray));
-//        int b = (byteArray[16]);
-//        System.out.println(byteArray[16]);
-//        System.out.println(byteArray[18]);
+    public static void main(String[] args) {
         launch();
     }
 }

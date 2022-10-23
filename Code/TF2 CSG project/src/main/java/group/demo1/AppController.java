@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -22,7 +21,9 @@ public class AppController {
     File crosshairFolder = new File("crosshairs");
     ArrayList<File> crosshairsGenerate = new ArrayList<>();
 
-    // Some choiceBoxes are used for multiple weapons
+    //
+    // Some choiceBoxes are used for multiple weapons!
+    //
     @FXML
     private ChoiceBox<String> cbScattergun, cbSodaPopper, cbShortstop, cbBabyFaceBlaster;
     @FXML
@@ -237,11 +238,9 @@ public class AppController {
         // "Default" choice is causing the program to crash upon generation
         //
 
-        //
-        // TODO See if you can read crosshairs as binary data to support crosshairs larger than 255
-        //
         String crosshair = removeExtension(cbWeapon.getValue());
         System.out.println(cbWeapon.getValue());
+        // Reads crosshair data
         InputStream in = new FileInputStream("crosshairs/" + cbWeapon.getValue());
         DataInputStream crosshairData = new DataInputStream(in);
         crosshairData.skipBytes(17); // Skips over to the width
