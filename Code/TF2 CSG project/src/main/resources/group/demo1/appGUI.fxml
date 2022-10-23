@@ -11,12 +11,11 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.demo1.AppController">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.demo1.AppController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -46,16 +45,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoScout" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoScout" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -174,16 +170,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoSoldier" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoSoldier" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -282,16 +275,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoPyro" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoPyro" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -386,16 +376,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoDemoman" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoDemoman" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -482,16 +469,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoHeavy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoHeavy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -572,16 +556,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoEngineer" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoEngineer" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -676,16 +657,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoMedic" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoMedic" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -766,16 +744,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoSniper" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoSniper" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>
@@ -868,16 +843,13 @@
                      <top>
                         <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
-                              <CheckBox fx:id="chkBoxNoSpy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a script for this class">
+                              <CheckBox fx:id="chkBoxNoSpy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
                                     <Insets left="10.0" top="10.0" />
                                  </padding>
-                                 <tooltip>
-                                    <Tooltip text="Creates a custom crosshair script for this class" />
-                                 </tooltip>
                               </CheckBox>
                            </children>
                         </HBox>

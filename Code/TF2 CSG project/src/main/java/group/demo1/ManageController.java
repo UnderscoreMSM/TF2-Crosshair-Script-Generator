@@ -9,7 +9,7 @@ import java.io.FilenameFilter;
 import java.util.Arrays;
 
 // TODO: refresh choiceboxes after deleting a crosshair
-public class ManageController {
+public class ManageController extends AppController {
     File crosshairFolder = new File("crosshairs");
     FilenameFilter filter = ((dir, name) -> name.toLowerCase().endsWith(".vtf")); // Lambda expression for filtering files
     ObservableList<String> list = FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter)));
@@ -32,6 +32,7 @@ public class ManageController {
         }
         lvCrosshairs.getItems().clear();
         lvCrosshairs.getItems().addAll(FXCollections.observableList(Arrays.asList(crosshairFolder.list(filter))));
+        refresh();
     }
 
     public String removeExtension(String fileName) {
