@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -15,7 +15,10 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
+
+<?import java.util.ArrayList?>
 <BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.demo1.AppController">
+
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -43,14 +46,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
                               <CheckBox fx:id="chkBoxNoScout" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -74,12 +77,12 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="63.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbScattergun" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbScattergun" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbBabyFaceBlaster" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                                <ChoiceBox fx:id="cbShortstop" prefHeight="25.0" prefWidth="194.0" value="Default" />
-                                                <ChoiceBox fx:id="cbSodaPopper" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbBabyFaceBlaster" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                                <ComboBox fx:id="cbShortstop" prefHeight="25.0" prefWidth="194.0" value="Default" />
+                                                <ComboBox fx:id="cbSodaPopper" prefWidth="150.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -105,13 +108,13 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbScoutPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                          <ChoiceBox fx:id="cbMadMilk" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                          <ChoiceBox fx:id="cbCleaver" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                          <ComboBox fx:id="cbScoutPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbMadMilk" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ComboBox fx:id="cbCleaver" prefHeight="25.0" prefWidth="252.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="45.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbBonkDrink" prefHeight="25.0" prefWidth="230.0" value="Default" />
-                                                <ChoiceBox fx:id="cbWinger" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                                <ComboBox fx:id="cbBonkDrink" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                                <ComboBox fx:id="cbWinger" prefHeight="25.0" prefWidth="230.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -144,12 +147,12 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="105.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbBat" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbBat" prefWidth="150.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbSandman" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbFishMelee" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbWrapAssassin" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbSandman" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbFishMelee" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbWrapAssassin" prefWidth="150.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -168,14 +171,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER_LEFT">
                            <children>
                               <CheckBox fx:id="chkBoxNoSoldier" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -199,12 +202,12 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbRocketLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbRocketLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbAirStrike" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                                <ChoiceBox fx:id="cbMangler" prefHeight="25.0" prefWidth="194.0" value="Default" />
-                                                <ChoiceBox fx:id="cbDirectHit" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbAirStrike" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                                <ComboBox fx:id="cbMangler" prefHeight="25.0" prefWidth="194.0" value="Default" />
+                                                <ComboBox fx:id="cbDirectHit" prefWidth="150.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -228,11 +231,11 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="60.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbSoldierSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbSoldierSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="65.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbBuffs" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                                <ChoiceBox fx:id="cbBison" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                                <ComboBox fx:id="cbBuffs" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                                <ComboBox fx:id="cbBison" prefHeight="25.0" prefWidth="252.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -255,8 +258,8 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="113.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbShovel" prefWidth="150.0" value="Default" />
-                                          <ChoiceBox fx:id="cbSoldierKatana" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbShovel" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbSoldierKatana" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -273,14 +276,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER_LEFT">
                            <children>
                               <CheckBox fx:id="chkBoxNoPyro" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -302,8 +305,8 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbFlameThrower" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                          <ChoiceBox fx:id="cbDragonFury" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                          <ComboBox fx:id="cbFlameThrower" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbDragonFury" prefHeight="25.0" prefWidth="192.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -327,13 +330,13 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="64.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbPyroSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                          <ChoiceBox fx:id="cbFlareGun" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ComboBox fx:id="cbPyroSG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbFlareGun" prefHeight="25.0" prefWidth="233.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbManmelter" prefHeight="25.0" prefWidth="230.0" value="Default" />
-                                                <ChoiceBox fx:id="cbThrusters" prefHeight="25.0" prefWidth="230.0" value="Default" />
-                                                <ChoiceBox fx:id="cbGasPasser" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                                <ComboBox fx:id="cbManmelter" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                                <ComboBox fx:id="cbThrusters" prefHeight="25.0" prefWidth="230.0" value="Default" />
+                                                <ComboBox fx:id="cbGasPasser" prefHeight="25.0" prefWidth="252.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -356,8 +359,8 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="147.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbAxe" prefWidth="150.0" value="Default" />
-                                          <ChoiceBox fx:id="cbHotHand" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbAxe" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbHotHand" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -374,14 +377,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
                               <CheckBox fx:id="chkBoxNoDemoman" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -403,8 +406,8 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="65.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbGrenadeLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                          <ChoiceBox fx:id="cbCannon" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                          <ComboBox fx:id="cbGrenadeLauncher" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbCannon" prefHeight="25.0" prefWidth="192.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -424,7 +427,7 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="65.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbSticky" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbSticky" prefHeight="25.0" prefWidth="257.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -447,10 +450,10 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbBottle" prefWidth="150.0" value="Default" />
-                                          <ChoiceBox fx:id="cbCaber" prefWidth="150.0" value="Default" />
-                                          <ChoiceBox fx:id="cbDemoKatana" prefWidth="150.0" value="Default" />
-                                          <ChoiceBox fx:id="cbSwords" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbBottle" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbCaber" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbDemoKatana" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbSwords" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -467,14 +470,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
                               <CheckBox fx:id="chkBoxNoHeavy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -495,7 +498,7 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="30.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbMiniGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbMiniGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -516,8 +519,8 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="60.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbHeavySG" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                          <ChoiceBox fx:id="cbFood" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ComboBox fx:id="cbHeavySG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbFood" prefHeight="25.0" prefWidth="233.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -537,7 +540,7 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbFists" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbFists" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -554,14 +557,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
                               <CheckBox fx:id="chkBoxNoEngineer" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -585,12 +588,12 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="64.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbEngiSG" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbEngiSG" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbFrontierJustice" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbPomson" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbRescueRanger" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                                <ComboBox fx:id="cbFrontierJustice" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbPomson" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbRescueRanger" prefHeight="25.0" prefWidth="192.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -614,9 +617,9 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbEngiPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                          <ChoiceBox fx:id="cbWrangler" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                          <ChoiceBox fx:id="cbShortCircuit" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                          <ComboBox fx:id="cbEngiPistol" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbWrangler" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ComboBox fx:id="cbShortCircuit" prefHeight="25.0" prefWidth="252.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -637,8 +640,8 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="80.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbWrench" prefWidth="150.0" value="Default" />
-                                          <ChoiceBox fx:id="cbGunslinger" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbWrench" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbGunslinger" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -655,14 +658,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
                               <CheckBox fx:id="chkBoxNoMedic" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -684,8 +687,8 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="60.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbSyringeGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
-                                          <ChoiceBox fx:id="cbCrossbow" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                          <ComboBox fx:id="cbSyringeGun" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbCrossbow" prefHeight="25.0" prefWidth="192.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -705,7 +708,7 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbMediGun" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbMediGun" prefHeight="25.0" prefWidth="257.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -725,7 +728,7 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbBonesaw" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbBonesaw" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -742,14 +745,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
                               <CheckBox fx:id="chkBoxNoSniper" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -773,12 +776,12 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="80.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbSniperRifle" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbSniperRifle" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                                              <children>
-                                                <ChoiceBox fx:id="cbClassic" prefHeight="25.0" prefWidth="192.0" value="Default" />
-                                                <ChoiceBox fx:id="cbHitman" prefWidth="150.0" value="Default" />
-                                                <ChoiceBox fx:id="cbHuntsman" prefHeight="25.0" prefWidth="194.0" value="Default" />
+                                                <ComboBox fx:id="cbClassic" prefHeight="25.0" prefWidth="192.0" value="Default" />
+                                                <ComboBox fx:id="cbHitman" prefWidth="150.0" value="Default" />
+                                                <ComboBox fx:id="cbHuntsman" prefHeight="25.0" prefWidth="194.0" value="Default" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -802,9 +805,9 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbSMG" prefHeight="25.0" prefWidth="257.0" value="Default" />
-                                          <ChoiceBox fx:id="cbCarbine" prefHeight="25.0" prefWidth="233.0" value="Default" />
-                                          <ChoiceBox fx:id="cbJarate" prefHeight="25.0" prefWidth="252.0" value="Default" />
+                                          <ComboBox fx:id="cbSMG" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbCarbine" prefHeight="25.0" prefWidth="233.0" value="Default" />
+                                          <ComboBox fx:id="cbJarate" prefHeight="25.0" prefWidth="252.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -824,7 +827,7 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbKukri" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbKukri" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -841,14 +844,14 @@
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
-                        <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                            <children>
                               <CheckBox fx:id="chkBoxNoSpy" mnemonicParsing="false" prefHeight="27.0" prefWidth="229.0" text="Do not create a scripts for this class">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                                  <padding>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="10.0" />
                                  </padding>
                               </CheckBox>
                            </children>
@@ -869,7 +872,7 @@
                                     </VBox>
                                     <VBox alignment="TOP_RIGHT" prefHeight="589.0" prefWidth="190.0" spacing="30.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbRevolver" prefHeight="25.0" prefWidth="206.0" value="Default" />
+                                          <ComboBox fx:id="cbRevolver" prefHeight="25.0" prefWidth="206.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -889,7 +892,7 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="183.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
                                        <children>
-                                          <ChoiceBox fx:id="cbKnife" prefHeight="25.0" prefWidth="257.0" value="Default" />
+                                          <ComboBox fx:id="cbKnife" prefHeight="25.0" prefWidth="257.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -909,7 +912,7 @@
                                     </VBox>
                                     <VBox prefHeight="569.0" prefWidth="186.0" spacing="30.0">
                                        <children>
-                                          <ChoiceBox fx:id="cbSapper" prefWidth="150.0" value="Default" />
+                                          <ComboBox fx:id="cbSapper" prefWidth="150.0" value="Default" />
                                        </children>
                                        <HBox.margin>
                                           <Insets right="10.0" top="20.0" />
@@ -926,9 +929,9 @@
       </TabPane>
    </center>
    <bottom>
-      <HBox prefHeight="43.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="900.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="43.0" prefWidth="479.0">
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="479.0">
                <children>
                   <Label text="File path:">
                      <padding>
@@ -950,7 +953,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="TOP_RIGHT" prefHeight="43.0" prefWidth="439.0">
+            <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="439.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#onGenerateClick" text="Generate">
                      <HBox.margin>
@@ -964,8 +967,87 @@
             </HBox>
          </children>
          <BorderPane.margin>
-            <Insets top="10.0" />
+            <Insets />
          </BorderPane.margin>
       </HBox>
    </bottom>
+   <fx:define>
+      <ArrayList fx:id="cbList">
+         <fx:reference source="cbScattergun"/>
+         <fx:reference source="cbSodaPopper"/>
+         <fx:reference source="cbShortstop"/>
+         <fx:reference source="cbBabyFaceBlaster"/>
+         <fx:reference source="cbScoutPistol"/>
+         <fx:reference source="cbWinger"/>
+         <fx:reference source="cbCleaver"/>
+         <fx:reference source="cbBonkDrink"/>
+         <fx:reference source="cbMadMilk"/>
+         <fx:reference source="cbBat"/>
+         <fx:reference source="cbFishMelee"/>
+         <fx:reference source="cbSandman"/>
+         <fx:reference source="cbWrapAssassin"/>
+
+         <fx:reference source="cbRocketLauncher"/>
+         <fx:reference source="cbDirectHit"/>
+         <fx:reference source="cbMangler"/>
+         <fx:reference source="cbAirStrike"/>
+         <fx:reference source="cbSoldierSG"/>
+         <fx:reference source="cbBuffs"/>
+         <fx:reference source="cbBison"/>
+         <fx:reference source="cbShovel"/>
+         <fx:reference source="cbSoldierKatana"/>
+
+         <fx:reference source="cbFlameThrower"/>
+         <fx:reference source="cbDragonFury"/>
+         <fx:reference source="cbPyroSG"/>
+         <fx:reference source="cbFlareGun"/>
+         <fx:reference source="cbManmelter"/>
+         <fx:reference source="cbThrusters"/>
+         <fx:reference source="cbGasPasser"/>
+         <fx:reference source="cbAxe"/>
+         <fx:reference source="cbHotHand"/>
+
+         <fx:reference source="cbGrenadeLauncher"/>
+         <fx:reference source="cbCannon"/>
+         <fx:reference source="cbSticky"/>
+         <fx:reference source="cbBottle"/>
+         <fx:reference source="cbSwords"/>
+         <fx:reference source="cbCaber"/>
+         <fx:reference source="cbDemoKatana"/>
+
+         <fx:reference source="cbMiniGun"/>
+         <fx:reference source="cbHeavySG"/>
+         <fx:reference source="cbFood"/>
+         <fx:reference source="cbFists"/>
+
+         <fx:reference source="cbEngiSG"/>
+         <fx:reference source="cbPomson"/>
+         <fx:reference source="cbRescueRanger"/>
+         <fx:reference source="cbFrontierJustice"/>
+         <fx:reference source="cbEngiPistol"/>
+         <fx:reference source="cbWrangler"/>
+         <fx:reference source="cbShortCircuit"/>
+         <fx:reference source="cbWrench"/>
+         <fx:reference source="cbGunslinger"/>
+
+         <fx:reference source="cbSyringeGun"/>
+         <fx:reference source="cbCrossbow"/>
+         <fx:reference source="cbMediGun"/>
+         <fx:reference source="cbBonesaw"/>
+
+         <fx:reference source="cbSniperRifle"/>
+         <fx:reference source="cbHuntsman"/>
+         <fx:reference source="cbHitman"/>
+         <fx:reference source="cbClassic"/>
+         <fx:reference source="cbSMG"/>
+         <fx:reference source="cbCarbine"/>
+         <fx:reference source="cbJarate"/>
+         <fx:reference source="cbKukri"/>
+
+         <fx:reference source="cbRevolver"/>
+         <fx:reference source="cbKnife"/>
+         <fx:reference source="cbSapper"/>
+      </ArrayList>
+   </fx:define>
 </BorderPane>
+
